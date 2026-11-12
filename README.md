@@ -1,32 +1,44 @@
-# AlertaJá — Flutter 3.1.0
+AlertaJá
+Aplicativo desenvolvido em Flutter para registrar e acompanhar ocorrências urbanas, como alagamentos, buracos nas vias, problemas de iluminação e descarte irregular de lixo.
 
-Aplicativo demonstrativo para registrar ocorrências urbanas. Tema escuro, painel, radar, insights, favoritos, filtros, edição de ocorrências, categorias e consulta meteorológica com localização do aparelho.
+A proposta é reunir essas informações de forma simples, permitindo que o usuário cadastre situações encontradas na cidade, consulte os registros e acompanhe seu status. O projeto utiliza armazenamento local, sem depender de cadastro ou servidor.
+Funcionalidades
+- Cadastro de ocorrências com categoria, descrição e nível de gravidade.
+- Categorias como alagamento, enchente, bueiro, árvore, deslizamento, buraco, iluminação, descarte irregular e outros.
+- Consulta, edição e exclusão de ocorrências.
+- Acompanhamento do status: pendente, validada ou rejeitada.
+- Radar com resumo das ocorrências registradas.
+- Painel de informações e indicadores.
+- Favoritos e filtros para facilitar a consulta.
+- Consulta de condições meteorológicas usando a localização do aparelho, mediante autorização.
+Imagens do aplicativo
+As capturas de tela devem ser salvas na pasta images/ com os nomes indicados abaixo. Assim que os arquivos forem adicionados ao repositório, as imagens aparecerão nesta seção do GitHub.
+Tela inicial
+<img width="1916" height="907" alt="image" src="https://github.com/user-attachments/assets/27fe1b54-9301-474e-a60e-50e2ebdadb59" />
 
-## Execução no Windows
 
-1. Instale o Flutter SDK e o Android Studio (com Android SDK e emulador).
-2. Extraia o ZIP, abra a pasta `AlertaJa_Flutter` e execute `INICIAR_WINDOWS.bat`.
-3. O script gera a pasta `android/` no seu computador, caso ainda não exista, instala dependências, executa análise e testes e inicia o app.
+Cadastro de ocorrência
+<img width="1917" height="903" alt="image" src="https://github.com/user-attachments/assets/fe2e1cac-ce0d-4095-b254-a192756da74c" />
 
-Ou use os comandos manualmente:
 
-```bash
-flutter create --platforms=android --project-name alerta_ja .
-flutter pub get
-flutter analyze
-flutter test
-flutter run
-```
+Radar de ocorrências
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/cc6355d0-3127-4d13-a852-39432ab47db6" />
 
-**Importante:** a estrutura Android é gerada localmente pelo Flutter SDK para assegurar compatibilidade com a versão instalada. Este ZIP contém todo o código-fonte Flutter, testes e script de inicialização, mas **não** contém a pasta Android gerada nem um APK compilado. Não foi possível executar Flutter neste ambiente; os testes e a compilação devem ser verificados no seu computador.
+Lista de ocorrências
+<img width="1917" height="892" alt="image" src="https://github.com/user-attachments/assets/86a000eb-138e-43bd-a692-9c0699658ff1" />
 
-## Funcionalidades
 
-- Ocorrências locais com gravidades Baixa, Moderada e Alta, status Pendente, Validada e Rejeitada.
-- Categorias: alagamento, enchente, bueiro, árvore, deslizamento, buraco, iluminação, descarte irregular e outro.
-- Edição, exclusão, favoritos, detalhes, radar e insights.
-- Consulta do clima por localização, mediante permissão, usando Open-Meteo.
+Detalhes da ocorrência
+<img width="1917" height="892" alt="image" src="https://github.com/user-attachments/assets/93901fe2-98e5-4f6e-bcb4-7046deb51de5" />
 
-## Limitações e privacidade
 
-Dados armazenados somente no dispositivo, sem sincronização ou backup em nuvem. O radar apresenta os registros locais e não é um serviço oficial de emergência. A consulta meteorológica requer internet e localização.
+Consulta do clima
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/84369823-fb41-4e13-bc30-a547f24b272c" />
+
+
+Tecnologias utilizadas
+- Flutter e Dart: desenvolvimento das telas e funcionalidades.
+- SharedPreferences: armazenamento local das ocorrências.
+- Geolocator: acesso à localização, com permissão do usuário.
+- HTTP e Open-Meteo: consulta de informações meteorológicas.
+- Flutter Test: testes automatizados.
