@@ -42,3 +42,9 @@ Tecnologias utilizadas
 - Geolocator: acesso à localização, com permissão do usuário.
 - HTTP e Open-Meteo: consulta de informações meteorológicas.
 - Flutter Test: testes automatizados.
+
+Team:
+Arthur Queiroz Nascimento RM555205
+Felipe Gasparetto Ohara Sato RM554315
+Gabriel de Lima RM99659
+
